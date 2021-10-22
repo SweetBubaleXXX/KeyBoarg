@@ -31,7 +31,7 @@ def on_press(key):
         if (pressed_key == key and pressed_key.released == True) or pressed_key != key:
             pressed_key = key
             pressed_key.released = False
-            play_audio(f"sounds/press{get_filename(key)}")
+            play_audio(f"press{get_filename(key)}")
     except NameError:
         pressed_key = key
 
@@ -42,7 +42,7 @@ def on_release(key):
         pressed_key.released = True
     except NameError:
         pass
-    play_audio(f"sounds/release{get_filename(key)}")
+    play_audio(f"release{get_filename(key)}")
 
 
 with keyboard.Listener(
